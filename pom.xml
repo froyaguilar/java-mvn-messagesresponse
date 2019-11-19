@@ -21,7 +21,7 @@
         <repository>
             <id>github</id>
             <name>GitHub OWNER Apache Maven Packages</name>
-            <url>https://maven.pkg.github.com/STDevLib/java-mvn</url>
+            <url>https://maven.pkg.github.com/STDevLib/java-mvn-messagesresponse</url>
         </repository>
     </distributionManagement>
 
