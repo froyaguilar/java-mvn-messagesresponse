@@ -19,11 +19,13 @@ public class AbstractResponse implements Serializable {
     }
 
     public Boolean has(MessagePairTypeCode messagePairTypeCode) {
-        return messagePairList.stream().anyMatch(s -> messagePairTypeCode.equals(s.getMessagePairTypeCode()));
+        return messagePairList.stream() //
+                .anyMatch(s -> messagePairTypeCode.equals(s.getMessagePairTypeCode()));
     }
 
     public List<MessagePair> fetchMessagePair(MessagePairTypeCode messagePairTypeCode) {
-        return messagePairList.stream().filter(s -> messagePairTypeCode.equals(s.getMessagePairTypeCode()))
+        return messagePairList.stream() //
+                .filter(s -> messagePairTypeCode.equals(s.getMessagePairTypeCode())) //
                 .collect(Collectors.toList());
     }
 
