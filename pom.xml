@@ -23,6 +23,11 @@
         <lombok.version>1.18.12</lombok.version>
         <apache.commons-lang3.version>3.10</apache.commons-lang3.version>
         <hamcrest.version>2.2</hamcrest.version>
+        <assertj.version>3.16.1</assertj.version>
+        <validation-api.version>2.0.1.Final</validation-api.version>
+
+        <hibernate-validator.version>6.0.13.Final</hibernate-validator.version>
+        <javax.el.version>3.0.0</javax.el.version>
 
         <!-- Maven plugins -->
         <surefire-maven-plugin.version>3.0.0-M4</surefire-maven-plugin.version>
@@ -76,6 +81,32 @@
             <version>${apache.commons-lang3.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>javax.validation</groupId>
+            <artifactId>validation-api</artifactId>
+            <version>${validation-api.version}</version>
+        </dependency>
+
+        <!--
+        A quick note here is that hibernate-validator is entirely separate from the persistence aspects of Hibernate
+        and by adding it as a dependency, we're not adding these persistence aspects into the project.
+        -->
+        <dependency>
+            <groupId>org.hibernate.validator</groupId>
+            <artifactId>hibernate-validator</artifactId>
+            <version>${hibernate-validator.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate.validator</groupId>
+            <artifactId>hibernate-validator-annotation-processor</artifactId>
+            <version>${hibernate-validator.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.glassfish</groupId>
+            <artifactId>javax.el</artifactId>
+            <version>${javax.el.version}</version>
+        </dependency>
+
         <!-- JUnit5 -->
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -101,6 +132,12 @@
             <groupId>org.hamcrest</groupId>
             <artifactId>hamcrest-core</artifactId>
             <version>${hamcrest.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>${assertj.version}</version>
             <scope>test</scope>
         </dependency>
 
