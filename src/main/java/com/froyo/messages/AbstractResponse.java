@@ -49,7 +49,6 @@ public class AbstractResponse implements Serializable {
             throw new ValidationConstraintRemote(listOfConstraintsFound);
         }
 
-
     }
 
     public Boolean has(@NonNull final MessagePairTypeCode messagePairTypeCode) {
@@ -62,6 +61,5 @@ public class AbstractResponse implements Serializable {
                 .filter(s -> messagePairTypeCode.equals(s.getMessagePairTypeCode())) //
                 .collect(Collectors.toList());
     }
-
 
 }

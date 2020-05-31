@@ -10,7 +10,6 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Set;
 
-@Getter
 public class ValidationConstraintRemote extends RuntimeException {
 
     private String exceptionMessage;
@@ -32,4 +31,5 @@ public class ValidationConstraintRemote extends RuntimeException {
     public List<Set<ConstraintViolation<MessagePair>>> getListOfConstraintsFound() {
         return Collections.unmodifiableList(this.listOfConstraintsFound);
     }
+
 }
